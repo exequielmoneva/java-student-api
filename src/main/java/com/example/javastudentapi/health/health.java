@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class health {
 
     @GetMapping
-    public String apiController(){
+    public String getApiHealth(){
         return "API is up!";
     }
 }
