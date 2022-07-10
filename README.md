@@ -28,6 +28,7 @@ I could have used some in-memory database such as H2 but I preferred Postgres fo
 - Java JDK 17 or later
 - Docker
 - PostgreSQL
+- .jar file of this project generated (some IDEs can create it by right clickin in the root folder, but you [can also do it manually](https://docs.oracle.com/javase/tutorial/deployment/jar/build.html))
 
 # How to use
 Inside the root folder of the project, run the following command
