@@ -52,7 +52,7 @@ public class StudentService {
     }
 
     @Transactional
-    public void updateStudent(Long studentId, String name, String email) {
+    public Student updateStudent(Long studentId, String name, String email) {
         Student student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST,
                         "Student with id " + studentId + " does not exist"));
@@ -68,7 +68,9 @@ public class StudentService {
                         "The email provided is already taken");
             }
             student.setEmail(email);
+            return student;
         }
 
+        return student;
     }
 }

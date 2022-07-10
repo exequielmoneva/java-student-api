@@ -1,9 +1,8 @@
 {
 	"info": {
-		"_postman_id": "abcabecb-ae89-495c-8af2-119d7c47595a",
+		"_postman_id": "bd7ee0f2-457b-4f4d-889f-d90cffd2caf0",
 		"name": "Student API",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "7071075"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -125,6 +124,28 @@
 								"api",
 								"v1",
 								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/v1/student/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/student/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"1"
 							]
 						}
 					},
