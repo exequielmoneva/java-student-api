@@ -1,6 +1,6 @@
 # Student API
 
-A simple Rest API for registering basic information from students.
+A simple Rest API for registering basic information from students following the Domain-driven design (DDD) approach.
 
 
 # Table of Contents
