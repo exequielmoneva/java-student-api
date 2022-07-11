@@ -23,7 +23,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/student",
+							"raw": "http://localhost:8080/api/v1/students",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -32,7 +32,7 @@
 							"path": [
 								"api",
 								"v1",
-								"student"
+								"students"
 							]
 						}
 					},
@@ -53,7 +53,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/student/delete/1",
+							"raw": "http://localhost:8080/api/v1/students/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -62,8 +62,7 @@
 							"path": [
 								"api",
 								"v1",
-								"student",
-								"delete",
+								"students",
 								"1"
 							]
 						}
@@ -85,7 +84,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/student/update/1?email=testea@test.com",
+							"raw": "http://localhost:8080/api/v1/students/1?email=testeado@test.com",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -94,14 +93,13 @@
 							"path": [
 								"api",
 								"v1",
-								"student",
-								"update",
+								"students",
 								"1"
 							],
 							"query": [
 								{
 									"key": "email",
-									"value": "testea@test.com"
+									"value": "testeado@test.com"
 								}
 							]
 						}
@@ -114,7 +112,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/student",
+							"raw": "http://localhost:8080/api/v1/students",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -123,7 +121,7 @@
 							"path": [
 								"api",
 								"v1",
-								"student"
+								"students"
 							]
 						}
 					},
@@ -135,7 +133,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/student/1",
+							"raw": "http://localhost:8080/api/v1/students/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -144,7 +142,7 @@
 							"path": [
 								"api",
 								"v1",
-								"student",
+								"students",
 								"1"
 							]
 						}

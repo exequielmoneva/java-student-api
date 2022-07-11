@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "api/v1/student")
+@RequestMapping(path = "api/v1/students")
 public class StudentController {
 
     private final StudentService studentService;
@@ -35,14 +35,14 @@ public class StudentController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @DeleteMapping(path = "delete/{studentId}")
+    @DeleteMapping(path = "{studentId}")
     public ResponseEntity<String> deleteStudent(@PathVariable("studentId") Long studentId){
         studentService.deleteStudent(studentId);
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @PutMapping(path = "update/{studentId}")
+    @PutMapping(path = "{studentId}")
     public ResponseEntity<Student> updateStudent(
             @PathVariable("studentId") Long studentId,
             @RequestParam(required = false) String name,
