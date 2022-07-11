@@ -1,13 +1,15 @@
 package com.example.javastudentapi.student;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "api/v1/student")
+@RequestMapping(path = "api/v1/students")
 public class StudentController {
 
     private final StudentService studentService;
@@ -28,22 +30,27 @@ public class StudentController {
         return studentService.getSingleStudent(studentId);
     }
     @PostMapping
-    public void registerStudent(@RequestBody Student student){
+    public ResponseEntity<String> registerStudent(@RequestBody Student student){
         studentService.addNewStudent(student);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @DeleteMapping(path = "delete/{studentId}")
-    public void deleteStudent(@PathVariable("studentId") Long studentId){
+    @DeleteMapping(path = "{studentId}")
+    public ResponseEntity<String> deleteStudent(@PathVariable("studentId") Long studentId){
         studentService.deleteStudent(studentId);
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @PutMapping(path = "update/{studentId}")
-    public void updateStudent(
+    @PutMapping(path = "{studentId}")
+    public ResponseEntity<Student> updateStudent(
             @PathVariable("studentId") Long studentId,
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String email
     ){
-        studentService.updateStudent(studentId, name, email);
+        Student updatedStudent = studentService.updateStudent(studentId, name, email);
+
+        return new ResponseEntity<>(updatedStudent, HttpStatus.OK);
     }
 
 }
