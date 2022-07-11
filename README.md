@@ -78,14 +78,14 @@ localhost:8080/api/v1/docs
 
 ## API specification
 
-|         Task         |                     URL                     | Method | Response code |       Response       |
-|:--------------------:|:-------------------------------------------:|:------:|:-------------:|:--------------------:|
-|   Check API health   |                      /                      |  GET   |      200      |      API is up!      |
-| request all students |               /api/v1/student               |  GET   |      200      | List of all students |
-|  Get single student  |         /api/v1/student/{studentId}         |  GET   |      200      |       Student        |
-|   Create a student   |               /api/v1/student               |  POST  |      204      |   Created student    |
-|    Update student    | /api/v1/student/update/studentId?email?name |  PUT   |      200      |   Updated student    |
-|    Delete student    |     /api/v1/student/delete/{studentId}      |  POST  |      204      |   Student deleted    |
+|         Task         |                  URL                  | Method | Response code |       Response       |
+|:--------------------:|:-------------------------------------:|:------:|:-------------:|:--------------------:|
+|   Check API health   |                   /                   |  GET   |      200      |      API is up!      |
+| request all students |           /api/v1/students            |  GET   |      200      | List of all students |
+|  Get single student  |     /api/v1/students/{studentId}      |  GET   |      200      |       Student        |
+|   Create a student   |           /api/v1/students           |  POST  |      204      |   Created student    |
+|    Update student    | /api/v1/students/studentId?email?name |  PUT   |      200      |   Updated student    |
+|    Delete student    |     /api/v1/students/{studentId}      |  POST  |      204      |   Student deleted    |
 
 # ToDos
 - Unit and integration tests
