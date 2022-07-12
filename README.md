@@ -21,8 +21,10 @@ As for Java, I decided to use the latest version at the moment (17).
 
 ### PostgreSQL
 Since I have experience using this database, I decided to take advantage of its simplicity. 
-I could have used some in-memory database such as H2 but I preferred Postgres for a more professional approach.
+I could have used some in-memory database such as H2, but I preferred Postgres for a more professional approach.
 
+### JUnit and Mockito
+I decided to use this tools since both are the industry's standard for testing in Java.
 
 # Requirements
 - Java JDK 17 or later
@@ -88,4 +90,4 @@ localhost:8080/api/v1/docs
 |    Delete student    |     /api/v1/students/{studentId}      |  POST  |      204      |   Student deleted    |
 
 # ToDos
-- Unit and integration tests
+- Integration tests
